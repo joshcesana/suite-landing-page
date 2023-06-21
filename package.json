@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.6.6"
+    "@astrojs/image": "^0.17.0",
+    "astro": "^2.6.6",
+    "sass": "^1.63.4"
   }
 }
