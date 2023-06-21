@@ -1,0 +1,164 @@
+@import 'resets.sass'
+@import 'variables.sass'
+
+body
+    @include font-family
+
+h1
+    color: $color-dark-blue
+    @include xl-heading-regular
+
+    strong
+        font-weight: 700
+
+p
+    color: $color-grey
+
+button
+    padding: 1rem 1.5rem
+    border-radius: 5px
+    border: 1px solid $color-dark-blue
+    @include sm-heading-bold
+
+    &.transparent
+        background-color: transparent
+        color: $color-dark-blue
+
+    &.solid
+        background-color: $color-dark-blue
+        color: $color-white
+        border: none
+
+.container
+    @include container
+
+.navbar-container
+    display: flex
+    justify-content: space-between
+    padding: 3rem 0
+
+.hero-container
+    display: flex
+    margin: 1rem 0 11rem
+
+    .hero-text
+        max-width: 640px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        margin-bottom: 2rem
+
+        h1
+            margin-bottom: 2.5rem
+
+        p
+            max-width: 350px
+            margin-bottom: 4rem
+            @include md-heading-regular
+
+        button
+            max-width: 256px
+
+        img
+            margin-right: 64px
+            margin-bottom: 21px
+            align-self: flex-end
+
+    .hero-image
+        margin-left: -151px
+        z-index: -1
+
+    .hero-stats
+        display: flex
+        flex-direction: column
+        justify-content: center
+        gap: 3rem
+        margin-left: 6rem
+
+        .stat
+            h2
+                @include lg-heading-bold
+
+            p
+                @include sm-heading-regular
+
+.about-container
+    display: flex
+    position: relative
+    width: 100%
+    height: 545px
+    background: $color-dark-blue
+    border-radius: 15px
+    z-index: 1
+
+    .about-image-man
+        width: 55%
+
+        img
+            position: relative
+            top: -45px
+            left: 115px
+            z-index: 10
+            
+    .about-image-blur
+        position: absolute
+        top: 129px
+        left: 40px
+        z-index: 5
+
+    .about-image-curve
+        position: absolute
+        top: 172px
+        left: 506px
+
+    .about-text
+        width: 45%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        gap: 3rem
+        padding-right: 8rem
+        margin-top: -2rem
+
+        h2
+            color: $color-white
+            @include lg-heading-regular
+
+        quote
+            color: $color-white
+            @include quote
+            
+        .name
+            color: $color-white
+            @include md-heading-bold
+        
+        .title
+            color: $color-white
+            @include sm-heading-regular
+            letter-spacing: 2.5px
+            
+footer
+    background: $color-cream
+    height: $footer-height
+    margin-top: -17rem
+
+    .footer-wrapper
+        display: flex
+        align-items: flex-end
+        height: $footer-height
+
+    .footer-container
+        display: flex
+        height: fit-content
+        width: 100%
+        justify-content: space-between
+        margin-bottom: 4.5rem
+
+    .copyright
+        @include footer
+
+    .socials
+        ul
+            list-style: none
+            display: flex
+            gap: 2rem
