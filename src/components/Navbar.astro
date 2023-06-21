@@ -1,0 +1,15 @@
+---
+import { Image } from '@astrojs/image/components';
+import logo from '/public/logo.svg';
+---
+
+<nav>
+    <div class="container">
+        <div class="navbar-container">
+            <div class="logo">
+                <Image src={logo} alt="suite logo" />
+            </div>
+            <button class="transparent">Request Beta Access</button>
+        </div>
+    </div>
+</nav>

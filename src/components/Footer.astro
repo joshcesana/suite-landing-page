@@ -1,0 +1,35 @@
+---
+import { Image } from "@astrojs/image/components"
+import suiteLogo from "/public/logo.svg"
+import facebook from "/public/icon-facebook.svg"
+import instagram from "/public/icon-instagram.svg"
+import twitter from "/public/icon-twitter.svg"
+---
+
+<footer>
+    <div class="container">
+        <div class="footer-wrapper">
+            <div class="footer-container">
+                <div class="logo">
+                    <Image src={suiteLogo} alt="suite logo" />
+                </div>
+                <div class="copyright">
+                    <p>Copyright - Suite</p>
+                </div>
+                <div class="socials">
+                    <ul>
+                        <li>
+                            <Image src={facebook} alt="facebook" />
+                        </li>
+                        <li>
+                            <Image src={instagram} alt="twitter" />
+                        </li>
+                        <li>
+                            <Image src={twitter} alt="instagram" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

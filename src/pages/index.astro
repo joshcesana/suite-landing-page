@@ -1,15 +1,86 @@
 ---
+import "../styles/styles.sass"
+import { Image } from "@astrojs/image/components"
+import curveImage from "/public/pattern-curved-line-1.svg"
+import heroImage from "/public/image-hero-portrait@2x.png"
+import manImage from "/public/image-jeremy-large@2x.png"
+import whiteCurveImage from "/public/pattern-curved-line-2.svg"
+import patternBlur from "/public/pattern-blur.svg"
+import Head from "../components/Head.astro"
+import Navbar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    <Head title="Suite Landing Page" />
+    <Navbar />
+    <div class="container">
+        <div class="hero-container">
+            <div class="hero-text">
+                <Image src={curveImage} alt="decorative curve image" />
+                <h1>
+                    A <strong>super solution</strong>
+                    <br /> for your <strong>business.</strong>
+                </h1>
+                <p>
+                    Our marketing and sales automations help you scale your outreach to get more
+                    leads for your company.
+                </p>
+                <button class="solid">Request Beta Access</button>
+            </div>
+            <div class="hero-image">
+                <Image
+                    src={heroImage}
+                    alt="decorative hero image"
+                    width="350"
+                    height="600"
+                    format="webp"
+                />
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h2>2k</h2>
+                    <p>Companies</p>
+                </div>
+                <div class="stat">
+                    <h2>8</h2>
+                    <p>Languages</p>
+                </div>
+                <div class="stat">
+                    <h2>1.2M</h2>
+                    <p>Leads</p>
+                </div>
+            </div>
+        </div>
+        <div class="about-container">
+            <div class="about-image-man">
+                <Image
+                    src={manImage}
+                    alt="Man holding tablet"
+                    width="360"
+                    height="590"
+                    format="webp"
+                />
+            </div>
+            <div class="about-image-blur">
+                <Image src={patternBlur} alt="Decorative blur pattern" width="500" height="500" />
+            </div>
+            <div class="about-image-curve">
+                <Image src={whiteCurveImage} alt="Decorative curve image" width="64" height="52" />
+            </div>
+            <div class="about-text">
+                <h2>It just works.</h2>
+                <quote>
+                    “I really like how it is an all-in-one solution that handle many of the tasks
+                    that you would normally need separate tools to do the same job. This thing is a
+                    miracle worker.”
+                </quote>
+                <div>
+                    <p class="name">Jeremy Robinson</p>
+                    <p class="title">CMO, FYLO</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <Footer />
 </html>
