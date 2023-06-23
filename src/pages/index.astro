@@ -2,7 +2,8 @@
 import "../styles/styles.sass"
 import { Image } from "@astrojs/image/components"
 import curveImage from "/public/pattern-curved-line-1.svg"
-import heroImage from "/public/image-hero-portrait@2x.png"
+import heroImageDesktop from "/public/image-hero-portrait@2x.png"
+import heroImageMobile from "/public/image-hero-landscape@2x.png"
 import manImage from "/public/image-jeremy-large@2x.png"
 import whiteCurveImage from "/public/pattern-curved-line-2.svg"
 import patternBlur from "/public/pattern-blur.svg"
@@ -19,8 +20,9 @@ import Footer from "../components/Footer.astro"
             <div class="hero-text">
                 <Image src={curveImage} alt="decorative curve image" />
                 <h1>
-                    A <strong>super solution</strong>
-                    <br /> for your <strong>business.</strong>
+                    <span class="no-wrap">A <strong>super solution</strong></span>
+                    <br /> 
+                    <span class="no-wrap">for your <strong>business.</strong></span>
                 </h1>
                 <p>
                     Our marketing and sales automations help you scale your outreach to get more
@@ -30,10 +32,17 @@ import Footer from "../components/Footer.astro"
             </div>
             <div class="hero-image">
                 <Image
-                    src={heroImage}
+                    src={heroImageDesktop}
+                    class="desktop"
                     alt="decorative hero image"
                     width="350"
                     height="600"
+                    format="webp"
+                />
+                <Image
+                    src={heroImageMobile}
+                    class="mobile"
+                    alt="decorative hero image"
                     format="webp"
                 />
             </div>
@@ -50,6 +59,20 @@ import Footer from "../components/Footer.astro"
                     <h2>1.2M</h2>
                     <p>Leads</p>
                 </div>
+            </div>
+        </div>
+        <div class="mobile-stats">
+            <div class="stat">
+                <h2>2k</h2>
+                <p>Companies</p>
+            </div>
+            <div class="stat">
+                <h2>8</h2>
+                <p>Languages</p>
+            </div>
+            <div class="stat">
+                <h2>1.2M</h2>
+                <p>Leads</p>
             </div>
         </div>
         <div class="about-container">
@@ -69,7 +92,7 @@ import Footer from "../components/Footer.astro"
                 <Image src={whiteCurveImage} alt="Decorative curve image" width="64" height="52" />
             </div>
             <div class="about-text">
-                <h2>It just works.</h2>
+                <h2>It just <strong>works.</strong></h2>
                 <quote>
                     “I really like how it is an all-in-one solution that handle many of the tasks
                     that you would normally need separate tools to do the same job. This thing is a

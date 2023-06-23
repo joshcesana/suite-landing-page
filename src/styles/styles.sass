@@ -11,29 +11,45 @@ h1
     strong
         font-weight: 700
 
+h2
+    strong
+        font-weight: 700
+
 p
     color: $color-grey
 
 button
-    padding: 1rem 1.5rem
-    border-radius: 5px
+    padding: .8rem 1.5rem
+    border-radius: 6px
     border: 1px solid $color-dark-blue
+    cursor: pointer
     @include sm-heading-bold
 
     &.transparent
         background-color: transparent
         color: $color-dark-blue
 
+    &.transparent:hover
+        background-color: $color-dark-blue
+        color: $color-white
+
     &.solid
         background-color: $color-dark-blue
         color: $color-white
         border: none
 
+    &.solid:hover
+        @include button-gradient
+
 .container
     @include container
 
+.mobile
+    display: none
+
 .navbar-container
     display: flex
+    align-items: center
     justify-content: space-between
     padding: 3rem 0
 
@@ -60,7 +76,7 @@ button
             max-width: 256px
 
         img
-            margin-right: 64px
+            margin-right: 45px
             margin-bottom: 21px
             align-self: flex-end
 
@@ -75,12 +91,12 @@ button
         gap: 3rem
         margin-left: 6rem
 
-        .stat
-            h2
-                @include lg-heading-bold
+.stat
+    h2
+        @include lg-heading-bold
 
-            p
-                @include sm-heading-regular
+    p
+        @include sm-heading-regular
 
 .about-container
     display: flex
@@ -99,7 +115,7 @@ button
             top: -45px
             left: 115px
             z-index: 10
-            
+
     .about-image-blur
         position: absolute
         top: 129px
@@ -127,16 +143,21 @@ button
         quote
             color: $color-white
             @include quote
-            
+
         .name
             color: $color-white
+            text-transform: uppercase
             @include md-heading-bold
-        
+
         .title
             color: $color-white
+            text-transform: uppercase
             @include sm-heading-regular
             letter-spacing: 2.5px
-            
+
+.mobile-stats
+    display: none
+
 footer
     background: $color-cream
     height: $footer-height
@@ -162,3 +183,224 @@ footer
             list-style: none
             display: flex
             gap: 2rem
+
+            li
+                cursor: pointer
+
+.no-wrap
+    white-space: nowrap
+
+@media only screen and (max-width: 1200px)
+    .hero-container
+        margin-bottom: 20rem
+
+    .about-container
+        flex-direction: column
+        align-items: center
+        height: fit-content
+        padding-bottom: 4rem
+
+        .about-image-man
+            width: fit-content
+            width: 252px
+            height: 325px
+
+            img
+                position: relative
+                width: 252px
+                height: 402px
+                top: -185px
+                left: 0
+
+        .about-image-blur
+            position: relative
+            margin-top: -22.5rem
+            top: -2rem
+            left: 0
+
+            img
+                width: 350px
+                height: 350px
+
+        .about-image-curve
+            position: relative
+            top: -64px
+            left: 0
+
+            img
+                width: 49px
+                height: 40px
+
+        .about-text
+            padding: 0
+            width: 100%
+            text-align: center
+
+            quote
+                padding: 0 5rem
+
+
+@media only screen and (max-width: 1150px)
+    .hero-stats
+        margin-left: 3rem !important
+
+@media only screen and (max-width: 1075px)
+    .hero-image
+        margin-left: -200px !important
+
+@media only screen and (max-width: 1025px)
+    .hero-image
+        margin-left: -248px !important
+
+@media only screen and (max-width: 975px)
+    .hero-image
+        margin-left: -300px !important
+
+@media only screen and (max-width: 925px)
+    .hero-container
+        justify-content: space-between !important
+        margin: 0 !important
+
+    .hero-stats
+        display: none !important
+        width: 0 !important
+
+    .hero-text
+        position: relative
+        width: 50% !important
+        margin-bottom: 0 !important
+
+        img
+            position: absolute
+            margin-right: 0 !important
+            top: 30px !important
+            left: 290px !important
+
+    .mobile-stats
+        display: flex
+        justify-content: space-around
+        margin: 4rem 0 17rem
+
+        .stat
+            text-align: center
+
+    
+@media only screen and (max-width: 815px)
+    .hero-text
+
+        h1
+            font-size: 3.5rem !important
+            line-height: 4rem !important
+            margin-bottom: 1.75rem !important
+
+        p
+            margin-bottom: 2.75rem !important
+
+        img
+            width: 231px
+            height: auto
+            top: 21px !important
+            left: 221px !important
+
+    .hero-image
+        width: 281px !important
+        height: 482px !important
+
+        img
+            width: 281px !important
+            height: 482px !important
+
+    .about-text
+        h2
+            font-size: 2.5rem !important
+            line-height: 3rem !important
+
+@media only screen and (max-width: 768px)
+    .hero-text
+        .hero-image
+            margin-left: 0 !important
+            max-width: 281px !important
+
+            img
+                width: 100% !important
+                height: 100% !important
+
+@media only screen and (max-width: 650px)
+    .container
+        padding: 0 2rem !important
+    .hero-container
+        flex-direction: column
+        margin-top: 4rem !important
+
+        .hero-text
+            width: 100% !important
+
+            h1
+                font-size: 10.5vw !important
+                line-height: 11.5vw !important
+
+            p
+                max-width: 100% !important
+                margin-bottom: 2rem !important
+
+            button
+                margin-bottom: 3.125rem
+
+            img
+                width: 43vw !important
+                top: -10vw !important
+                left: 41vw !important
+                
+
+        .hero-image
+            width: 100% !important
+            height: auto !important
+            margin: 0 !important
+
+            img
+                width: 100% !important
+                height: auto !important
+
+            .mobile
+                display: block !important
+
+            .desktop
+                display: none !important
+
+    .about-container
+        .about-text
+            quote
+                padding: 0 1rem !important
+
+@media only screen and (max-width: 550px)
+    .navbar-container
+        font-size: 0.875rem !important
+
+        button
+            padding: .75rem 1rem !important
+
+    .container
+        padding: 0 1rem !important
+
+    .mobile-stats
+        flex-direction: column !important
+        gap: 2.5rem
+    
+    footer
+        .footer-container
+            flex-direction: column !important
+            align-items: center !important
+            gap: 1.5rem
+
+@media only screen and (max-width: 450px)
+    .about-container
+        margin-left: -1rem !important
+        margin-right: -1rem !important
+        margin-bottom: 4rem
+        width: calc(100% + 2rem) !important
+
+@media only screen and (max-width: 350px)
+    .navbar-container
+        button
+            padding: .5rem .75rem !important
+            font-size: 0.75rem !important
