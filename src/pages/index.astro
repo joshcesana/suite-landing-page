@@ -30,7 +30,7 @@ import Footer from "../components/Footer.astro"
     <div class="container">
         <div class="hero-container" role="banner" aria-labelledby="heroTitle">
             <div class="hero-text">
-                <Image src={curveImage} alt="decorative curve image" />
+                <Image src={curveImage} alt="decorative curve image" loading="eager" />
                 <h1 id="heroTitle">
                     <span class="no-wrap">A <strong>super solution</strong></span>
                     <br /> 
@@ -50,12 +50,14 @@ import Footer from "../components/Footer.astro"
                     width="350"
                     height="600"
                     format="webp"
+                    loading="eager" 
                 />
                 <Image
                     src={heroImageMobile}
                     class="mobile"
                     alt="decorative hero image"
                     format="webp"
+                    loading="eager" 
                 />
             </div>
             <div class="hero-stats">
@@ -95,13 +97,14 @@ import Footer from "../components/Footer.astro"
                     width="360"
                     height="590"
                     format="webp"
+                    loading="eager" 
                 />
             </div>
             <div class="about-image-blur">
-                <Image src={patternBlur} alt="Decorative blur pattern" width="500" height="500" />
+                <Image src={patternBlur} alt="Decorative blur pattern" width="500" height="500" loading="eager" />
             </div>
             <div class="about-image-curve">
-                <Image src={whiteCurveImage} alt="Decorative curve image" width="64" height="52" />
+                <Image src={whiteCurveImage} alt="Decorative curve image" width="64" height="52" loading="eager" />
             </div>
             <div class="about-text">
                 <h2>It just <strong>works.</strong></h2>
