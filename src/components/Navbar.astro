@@ -1,6 +1,6 @@
 ---
-import { Image } from '@astrojs/image/components';
-import logo from '/public/logo.svg';
+import { Image } from "@astrojs/image/components"
+import logo from "/public/logo.svg"
 ---
 
 <nav>
@@ -9,7 +9,29 @@ import logo from '/public/logo.svg';
             <div class="logo">
                 <Image src={logo} alt="suite logo" />
             </div>
-            <button class="transparent">Request Beta Access</button>
+            <a href="#">Request Beta Access</a>
         </div>
     </div>
 </nav>
+
+<style lang="sass">
+    @import '../styles/variables'
+    ul
+        list-style: none
+        margin: 0
+        padding: 0
+
+    a
+        padding: .9rem 1.3rem
+        border-radius: 6px
+        border: 1px solid $color-dark-blue
+        cursor: pointer
+        @include sm-heading-bold
+        background-color: transparent
+        color: $color-dark-blue
+        text-decoration: none
+
+        &:hover
+            background-color: $color-dark-blue
+            color: $color-white
+</style>
